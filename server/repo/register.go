@@ -3,7 +3,7 @@ package repo
 import (
 	"context"
 
-	"github.com/elsumanta/grpcserver/server/model"
+	"github.com/patrichr/SimpleApp/server/model"
 )
 
 func (repo *Repo) Register(ctx context.Context, req model.Register) (num int, err error) {

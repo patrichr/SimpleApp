@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/elsumanta/grpcserver/grpc"
+	pb "github.com/patrichr/SimpleApp/grpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 
@@ -15,13 +15,13 @@ import (
 	_ "github.com/lib/pq"
 
 	//Import internal modules
-	handler "github.com/elsumanta/grpcserver/server/handler"
-	repo "github.com/elsumanta/grpcserver/server/repo"
+	handler "github.com/patrichr/SimpleApp/server/handler"
+	repo "github.com/patrichr/SimpleApp/server/repo"
 )
 
 var (
 	port     = flag.Int("port", 50051, "The server port")
-	dbhost   = "192.168.0.108"
+	dbhost   = "192.168.0.108" //IP addr Win
 	dbport   = 5656
 	user     = "server"
 	password = "server"

@@ -1,4 +1,4 @@
-module github.com/elsumanta/grpcserver/server
+module github.com/elsumanta/SimpleApp/server
 
 go 1.14
 
