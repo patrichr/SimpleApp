@@ -1,6 +1,6 @@
 package model
 
-type Register struct {
+type Task struct {
 	TaskName    string `json:"task_name" db:"task_name"`
 	TaskOwner   string `json:"owner_name" db:"owner_name"`
 	Description string `json:"description" db:"description"`

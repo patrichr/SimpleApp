@@ -10,7 +10,7 @@ import (
 
 // integrate widget
 func (s *Server) Register(ctx context.Context, in *pb.RegRequest) (*pb.RegResponse, error) {
-	_, err := s.repo.Register(ctx, model.Register{
+	_, err := s.repo.Register(ctx, model.Task{
 		TaskName:    in.GetTaskName(),
 		TaskOwner:   in.GetTaskOwner(),
 		Description: in.GetDescription(),

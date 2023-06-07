@@ -56,3 +56,12 @@ or simply press play/stop at the interface
 2. run command `go mod vendor`
 3. run `go build && ./server`
 4. from grpcox, connect to server port 50051
+5. enter gRPC Server target as `localhost:50051', services as `grpc.Greeter` and Methods as `Register`
+6. input the data into the JSON, and there shall be a response bellow it after clicking submit, as pictured bellow.
+
+![image](https://github.com/patrichr/SimpleApp/assets/133081619/712626ed-ae8c-4446-af18-5eb03531cd5b)
+
+The result To-Do task shall appear in the dbeaver, when you execute a query as shown:
+![image](https://github.com/patrichr/SimpleApp/assets/133081619/bfb57532-96ea-41db-a953-7dbc4ead6ce6)
+
+

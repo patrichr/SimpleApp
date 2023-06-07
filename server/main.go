@@ -21,7 +21,7 @@ import (
 
 var (
 	port     = flag.Int("port", 50051, "The server port")
-	dbhost   = "192.168.0.108" //IP addr Win
+	dbhost   = "192.168.0.105" //or localhost.
 	dbport   = 5656
 	user     = "server"
 	password = "server"

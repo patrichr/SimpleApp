@@ -8,7 +8,7 @@ import (
 
 //go:generate moq -out handler_mock.go . Repo
 type Repo interface {
-	Register(ctx context.Context, req model.Register) (num int, err error)
+	Register(ctx context.Context, req model.Task) (num int, err error)
 }
 type Server struct {
 	repo Repo

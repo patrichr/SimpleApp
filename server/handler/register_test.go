@@ -31,7 +31,7 @@ func TestServer_Register(t *testing.T) {
 			name: "success",
 			fields: fields{
 				repo: &RepoMock{
-					RegisterFunc: func(ctx context.Context, req model.Register) (int, error) {
+					RegisterFunc: func(ctx context.Context, req model.Task) (int, error) {
 						return 0, nil
 					},
 				},
@@ -55,7 +55,7 @@ func TestServer_Register(t *testing.T) {
 			name: "error",
 			fields: fields{
 				repo: &RepoMock{
-					RegisterFunc: func(ctx context.Context, req model.Register) (int, error) {
+					RegisterFunc: func(ctx context.Context, req model.Task) (int, error) {
 						return 0, errors.New("error registration")
 					},
 				},

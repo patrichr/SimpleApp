@@ -6,7 +6,7 @@ import (
 	"github.com/patrichr/SimpleApp/server/model"
 )
 
-func (repo *Repo) Register(ctx context.Context, req model.Register) (num int, err error) {
+func (repo *Repo) Register(ctx context.Context, req model.Task) (num int, err error) {
 	resOrm := repo.DB.Create(req)
 	return 0, resOrm.Error
 }

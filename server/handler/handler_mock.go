@@ -13,7 +13,7 @@ import (
 // If this is not the case, regenerate this file with moq.
 var _ Repo = &RepoMock{}
 
-// RepoMock is a mock implementation of Repo.
+// ReproMock is a mock implementation of Repo.
 //
 // 	func TestSomethingThatUsesRepo(t *testing.T) {
 //
@@ -30,7 +30,7 @@ var _ Repo = &RepoMock{}
 // 	}
 type RepoMock struct {
 	// RegisterFunc mocks the Register method.
-	RegisterFunc func(ctx context.Context, req model.Register) (int, error)
+	RegisterFunc func(ctx context.Context, req model.Task) (int, error)
 
 	// calls tracks calls to the methods.
 	calls struct {
@@ -39,20 +39,20 @@ type RepoMock struct {
 			// Ctx is the ctx argument value.
 			Ctx context.Context
 			// Req is the req argument value.
-			Req model.Register
+			Req model.Task
 		}
 	}
 	lockRegister sync.RWMutex
 }
 
 // Register calls RegisterFunc.
-func (mock *RepoMock) Register(ctx context.Context, req model.Register) (int, error) {
+func (mock *RepoMock) Register(ctx context.Context, req model.Task) (int, error) {
 	if mock.RegisterFunc == nil {
 		panic("RepoMock.RegisterFunc: method is nil but Repo.Register was just called")
 	}
 	callInfo := struct {
 		Ctx context.Context
-		Req model.Register
+		Req model.Task
 	}{
 		Ctx: ctx,
 		Req: req,
@@ -68,11 +68,11 @@ func (mock *RepoMock) Register(ctx context.Context, req model.Register) (int, er
 //     len(mockedRepo.RegisterCalls())
 func (mock *RepoMock) RegisterCalls() []struct {
 	Ctx context.Context
-	Req model.Register
+	Req model.Task
 } {
 	var calls []struct {
 		Ctx context.Context
-		Req model.Register
+		Req model.Task
 	}
 	mock.lockRegister.RLock()
 	calls = mock.calls.Register
