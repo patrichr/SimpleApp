@@ -40,7 +40,7 @@ func TestServer_Register(t *testing.T) {
 				ctx: context.Background(),
 				in: &pb.RegRequest{
 					TaskName:    "Make it",
-					OwnerName:   "Me",
+					TaskOwner:   "Me",
 					Description: "create simple to do app",
 					Status:      "0",
 				},
@@ -64,7 +64,7 @@ func TestServer_Register(t *testing.T) {
 				ctx: context.Background(),
 				in: &pb.RegRequest{
 					TaskName:    "Make it",
-					OwnerName:   "Me",
+					TaskOwner:   "Me",
 					Description: "create simple to do app",
 					Status:      "0",
 				},

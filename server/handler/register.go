@@ -12,7 +12,7 @@ import (
 func (s *Server) Register(ctx context.Context, in *pb.RegRequest) (*pb.RegResponse, error) {
 	_, err := s.repo.Register(ctx, model.Register{
 		TaskName:    in.GetTaskName(),
-		OwnerName:   in.GetOwnerName(),
+		TaskOwner:   in.GetTaskOwner(),
 		Description: in.GetDescription(),
 		Status:      in.GetStatus(),
 	})
