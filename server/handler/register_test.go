@@ -8,7 +8,7 @@ import (
 
 	"errors"
 
-	pb "github.com/patrichr/SimpleApp/grpc"
+	pb "github.com/elsumanta/grpcserver/grpc"
 	"github.com/patrichr/SimpleApp/server/model"
 )
 
