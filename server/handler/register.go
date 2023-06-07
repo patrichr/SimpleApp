@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	pb "github.com/elsumanta/grpcserver/grpc"
+	pb "github.com/patrichr/SimpleApp/grpc"
 	"github.com/patrichr/SimpleApp/server/model"
 )
 
