@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/elsumanta/grpcserver/grpc"
+	pb "github.com/patrichr/SimpleApp/grpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 
